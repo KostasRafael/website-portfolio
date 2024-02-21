@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <body>
+    <header class="page-header">
+      <img class="page-header__item logo" src="./img/logo.png" alt="My logo">
+      <nav class="page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+          </li>
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item navigation-list__item--active">About Me</a>
+          </li>
+          <li class="active" role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+          </li>
+          <li role="presentation" >
+            <a href="./work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+      <form action="https://www.my-portfolio.com/my-messages" method="post">
+        <label for="email">Email:</label>
+         <input type="email" id="email" required><br>
+         <label for="tel">Telephone:</label>
+        <input type="tel" id="tel"><br>
+        <label for="text-message">Message:</label>
+        <textarea maxlength="240" id="text-message" required ></textarea><br>
+        <input type="submit" value="Send message">
+        
+
+      </form>
+
+      <footer>
+        <p>Find me on</p>
+        <img width="50" src="img/facebook.svg" alt="facebook icon">
+        <img width="60" src="img/instagram.svg" alt="instagram icon">
+        <img width="60" src="img/twitter.svg" alt="twitter icon">
+        <img width="50" src="img/linkedin.svg" alt="linkedin icon">
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>   
+</body>
+</html>

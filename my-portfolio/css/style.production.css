@@ -1,0 +1,362 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+/*
+Colors used
+
+Text color (Dark Gray): #2b2b2b;
+Primary color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+*/
+
+:root {
+    --custom-green: #357b70;
+    --custom-yellow: #e0b354;
+    --custom-grey: #2b2b2b;
+    --custom-white:  rgb(247, 239, 229);
+    --custom-brown: rgb(148, 37, 37);
+    --general-font-size: 20px;
+  }
+  
+  body {
+    background-color: var(--custom-white);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 42px;
+    font-weight: 900;
+  }
+  
+  p {
+    font-style: italic;
+    font-size: var(--general-font-size);
+  }
+  
+  .my-code {
+    font-style: italic;
+    font-size: var(--general-font-size);
+  }
+  
+  nav>ul {
+    font-size: var(--general-font-size);
+    font-weight: 700;
+  }
+  
+  a {
+    color: var(--custom-green);
+    text-decoration: none;
+  }
+  
+  a:hover, a:focus {
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  a:active {
+     color: grey;
+  }
+  
+  a:visited {
+    color: var(--custom-yellow);
+  }
+  
+  button, .button {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--custom-grey);
+    font-size: var(--general-font-size);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+  }
+  
+  button, .button:hover, button:focus {
+    cursor: pointer;
+    color: black;
+    opacity: 0.8;
+    }
+  
+  button, .button:active {
+    background-color: var(--custom-yellow);
+  }
+  
+  
+  .page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  
+  .page-header {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    width:100%;
+    padding: 20px;
+  }
+  
+  .page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+  }
+  
+  .logo {
+    width: 250px;
+    height: 150px;
+    }
+  
+    .profile__image {
+      display: block;
+    height: autopx;
+    width: 25%;
+    border-radius: 50%;
+     }
+  
+     .active {
+      background-color: var(--custom-brown);
+     }
+  
+  
+  
+  .page-header__item:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+  }
+  
+  .navigation-list {
+    list-style-type: none;
+  }
+  
+  .navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .image__text {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    padding: 20px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .image-text__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 600px;
+            flex: 0 1 600px;
+  }
+  
+  div:last-child {
+    padding-left: 20px;
+  }
+  
+  
+  
+  .aboutme {
+    display: inline;
+    text-align: center;
+  }
+  
+  
+  .aboutme__list {
+    list-style-type: none;
+  }
+  
+  
+  
+  @-webkit-keyframes color-change {
+    from {
+      fill: #ffff00;
+    }
+    to {
+      fill: orangered;
+    }
+  }
+  
+  
+  
+  @keyframes color-change {
+    from {
+      fill: #ffff00;
+    }
+    to {
+      fill: orangered;
+    }
+  }
+  
+  @-webkit-keyframes ground-color {
+    from {
+      fill:#782121;
+    }
+    to {
+      fill:greenyellow;
+    }
+  }
+  
+  @keyframes ground-color {
+    from {
+      fill:#782121;
+    }
+    to {
+      fill:greenyellow;
+    }
+  }
+  
+  .sun {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-name: color-change;
+            animation-name: color-change;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  
+  .ground {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-name: ground-color;
+            animation-name: ground-color;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  
+  .svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  
+  }
+  
+  @-webkit-keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    to {
+      -webkit-transform: translate(-150px, 50px);
+              transform: translate(-150px, 50px);
+    }
+  }
+  
+  @keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 0px);
+              transform: translate(0, 0px);
+    }
+    to {
+      -webkit-transform: translate(-150px, 50px);
+              transform: translate(-150px, 50px);
+    }
+  }
+  
+  .cloud {
+    -webkit-animation: 10s cloud-move infinite linear;
+            animation: 10s cloud-move infinite linear;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*css for the work.html file*/
+  .grid {
+    display:-ms-grid;
+    display:grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .grid__item {
+    background-color: lightgrey;
+    padding: 20px;
+  }
+  
+  .grid__item:last-child {
+    -ms-grid-column: 3;
+    grid-column: 3 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 /3;
+  }
+  
+  .work-heading {
+    margin-left: 20px;
+  }
+  
+  @media all and (max-width: 480px) {
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media all and (max-width:768px) {
+    .grid {
+      grid-gap: 10px;
+    }
+  }
+    
+    .grid__item:last-child {
+      grid-column: auto;
+      grid-row: auto;
+    }
+  
+    h1 {
+      font-size: var(--general-font-size);
+    }
+  
+  
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .grid {
+      -ms-grid-columns: 1fr 10px 1fr;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+    
+  
+   
+  
+  
+  
+  
+  
