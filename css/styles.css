@@ -7,28 +7,30 @@ Secondary Color (Orange): #e0b354;
 */
 
 :root {
-  --custom-green: #357b70;
+  --primary: #0b0519;
+  --secondary: #450d80;
+  --button-default: #433352;
+  --button-hover-active: #9965dd;
   --custom-yellow: #e0b354;
   --custom-grey: #2b2b2b;
-  --custom-white:  rgb(247, 239, 229);
+  --custom-white: rgb(247, 239, 229);
   --custom-brown: rgb(148, 37, 37);
-  --general-font-size: 20px;
 }
 
 body {
-  background-color: var(--custom-white);
-  font-family: 'Lato', sans-serif;
+  background-color: var(--primary);
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 2rem;
   font-weight: 900;
 }
 
 p {
   font-style: italic;
-  font-size: var(--general-font-size);
+  font-size: 1.25rem;
 }
 
 .my-code {
@@ -36,33 +38,50 @@ p {
   font-size: var(--general-font-size);
 }
 
-nav>ul {
+nav > ul {
   font-size: var(--general-font-size);
   font-weight: 700;
 }
 
+.button-image {
+  width: 4rem;
+}
+
+.work-icon {
+  width: 5rem;
+  height: 5rem;
+}
 a {
-  color: var(--custom-green);
+  background-color: var(--button-default);
+  border-radius: 15%;
+  padding: 0.35rem 0.5rem;
+  color: white;
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
+  background-color: var(--button-hover-active);
+  color: #150722;
   text-decoration: underline;
   cursor: pointer;
   opacity: 0.8;
 }
 
 a:active {
-   color: grey;
+  background-color: var(--button-hover-active);
+  color: #150722;
 }
 
 a:visited {
-  color: var(--custom-yellow);
+  background-color: var(--button-hover-active);
+  color: #150722;
 }
 
-button, .button {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--custom-grey);
+button,
+.button {
+  font-family: "Lato", sans-serif;
+  background-color: var(--button-default);
   font-size: var(--general-font-size);
   color: white;
   padding: 5px 10px;
@@ -71,26 +90,36 @@ button, .button {
   transition: opacity 0.5s;
 }
 
-button, .button:hover, button:focus {
+button,
+.button:hover,
+button:focus {
+  background-color: var(--button-hover-active);
   cursor: pointer;
-  color: black;
+  color: #150722;
   opacity: 0.8;
-  }
-
-button, .button:active {
-  background-color: var(--custom-yellow);
 }
 
+button,
+.button:active {
+  background-color: var(--button-hover-active);
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
+}
 
 .page-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: var(--button-hover-active);
+  width: 80%;
 }
 
 .page-header {
-  display:flex;
-  width:100%;
+  display: flex;
+  width: 100%;
   padding: 20px;
 }
 
@@ -99,22 +128,13 @@ button, .button:active {
 }
 
 .logo {
-  width: 250px;
-  height: 150px;
-  }
+  height: 80px;
+  flex-basis: 100px;
+}
 
-  .profile__image {
-    display: block;
-  height: autopx;
-  width: 25%;
-  border-radius: 50%;
-   }
-
-   .active {
-    background-color: var(--custom-brown);
-   }
-
-
+.active {
+  background-color: var(--custom-brown);
+}
 
 .page-header__item:last-child {
   flex-grow: 1;
@@ -130,39 +150,79 @@ button, .button:active {
   margin-left: 15px;
 }
 
-
 * {
   box-sizing: border-box;
 }
 
-.image__text {
-  display:flex;
-  padding: 20px;
-  width: 100%;
+#main-block {
+  display: flex;
   justify-content: center;
 }
 
-.image-text__item {
-  flex: 0 1 600px;
+.profile__image {
+  display: inline-block;
+  height: autopx;
+  width: 10%;
+  border-radius: 15%;
+  flex-shrink: 1;
+}
+
+.text {
+  flex-shrink: 1;
+}
+
+.image__text {
+  color: white;
+  display: flex;
+  padding: 20px;
+  width: 80%;
+  justify-content: center;
+  background-color: var(--secondary);
+}
+
+.footer-icons {
+  width: 2rem;
+  height: 2rem;
+}
+
+#contact-container {
+  display: inline-block;
+  background-color: var(--secondary);
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-heading {
+  color: white;
+}
+.contact-labels {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  min-width: 140px;
+}
+
+.contact-inputs {
+  margin: 5px;
 }
 
 div:last-child {
   padding-left: 20px;
 }
 
-
-
 .aboutme {
   display: inline;
   text-align: center;
+  color: white;
 }
-
 
 .aboutme__list {
   list-style-type: none;
 }
-
-
 
 @keyframes color-change {
   from {
@@ -175,10 +235,10 @@ div:last-child {
 
 @keyframes ground-color {
   from {
-    fill:#782121;
+    fill: #782121;
   }
   to {
-    fill:greenyellow;
+    fill: greenyellow;
   }
 }
 
@@ -203,7 +263,6 @@ div:last-child {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-
 }
 
 @keyframes cloud-move {
@@ -219,17 +278,9 @@ div:last-child {
   animation: 10s cloud-move infinite linear;
 }
 
-
-
-
-
-
-
-
-
 /*css for the work.html file*/
 .grid {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
@@ -254,31 +305,23 @@ div:last-child {
   }
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width: 768px) {
   .grid {
     grid-gap: 10px;
   }
 }
-  
-  .grid__item:last-child {
-    grid-column: auto;
-    grid-row: auto;
-  }
 
-  h1 {
-    font-size: var(--general-font-size);
-  }
+.grid__item:last-child {
+  grid-column: auto;
+  grid-row: auto;
+}
 
+h1 {
+  font-size: 2rem;
+}
 
 @media all and (min-width: 480px) and (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-  
-
- 
-
-
-
-
