@@ -7,28 +7,30 @@ Secondary Color (Orange): #e0b354;
 */
 
 :root {
-  --custom-green: #357b70;
+  --primary: #0b0519;
+  --secondary: #450d80;
+  --button-default: #433352;
+  --button-hover-active: #9965dd;
   --custom-yellow: #e0b354;
   --custom-grey: #2b2b2b;
   --custom-white: rgb(247, 239, 229);
   --custom-brown: rgb(148, 37, 37);
-  --general-font-size: 20px;
 }
 
 body {
-  background-color: var(--custom-white);
-  font-family: 'Lato', sans-serif;
+  background-color: var(--primary);
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 2rem;
   font-weight: 900;
 }
 
 p {
   font-style: italic;
-  font-size: var(--general-font-size);
+  font-size: 1.25rem;
 }
 
 .my-code {
@@ -41,30 +43,45 @@ nav > ul {
   font-weight: 700;
 }
 
+.button-image {
+  width: 4rem;
+}
+
+.work-icon {
+  width: 5rem;
+  height: 5rem;
+}
 a {
-  color: var(--custom-green);
+  background-color: var(--button-default);
+  border-radius: 15%;
+  padding: 0.35rem 0.5rem;
+  color: white;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
+  background-color: var(--button-hover-active);
+  color: #150722;
   text-decoration: underline;
   cursor: pointer;
   opacity: 0.8;
 }
 
 a:active {
-  color: grey;
+  background-color: var(--button-hover-active);
+  color: #150722;
 }
 
 a:visited {
-  color: var(--custom-yellow);
+  background-color: var(--button-hover-active);
+  color: #150722;
 }
 
 button,
 .button {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--custom-grey);
+  font-family: "Lato", sans-serif;
+  background-color: var(--button-default);
   font-size: var(--general-font-size);
   color: white;
   padding: 5px 10px;
@@ -76,20 +93,28 @@ button,
 button,
 .button:hover,
 button:focus {
+  background-color: var(--button-hover-active);
   cursor: pointer;
-  color: black;
+  color: #150722;
   opacity: 0.8;
 }
 
 button,
 .button:active {
-  background-color: var(--custom-yellow);
+  background-color: var(--button-hover-active);
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
 }
 
 .page-footer {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: var(--button-hover-active);
+  width: 80%;
 }
 
 .page-header {
@@ -103,15 +128,8 @@ button,
 }
 
 .logo {
-  width: 250px;
-  height: 150px;
-}
-
-.profile__image {
-  display: block;
-  height: autopx;
-  width: 25%;
-  border-radius: 50%;
+  height: 80px;
+  flex-basis: 100px;
 }
 
 .active {
@@ -136,15 +154,60 @@ button,
   box-sizing: border-box;
 }
 
-.image__text {
+#main-block {
   display: flex;
-  padding: 20px;
-  width: 100%;
   justify-content: center;
 }
 
-.image-text__item {
-  flex: 0 1 600px;
+.profile__image {
+  display: inline-block;
+  height: autopx;
+  width: 10%;
+  border-radius: 15%;
+  flex-shrink: 1;
+}
+
+.text {
+  flex-shrink: 1;
+}
+
+.image__text {
+  color: white;
+  display: flex;
+  padding: 20px;
+  width: 80%;
+  justify-content: center;
+  background-color: var(--secondary);
+}
+
+.footer-icons {
+  width: 2rem;
+  height: 2rem;
+}
+
+#contact-container {
+  display: inline-block;
+  background-color: var(--secondary);
+  width: 40%;
+  height: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-heading {
+  color: white;
+}
+.contact-labels {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  min-width: 140px;
+}
+
+.contact-inputs {
+  margin: 5px;
 }
 
 div:last-child {
@@ -154,6 +217,7 @@ div:last-child {
 .aboutme {
   display: inline;
   text-align: center;
+  color: white;
 }
 
 .aboutme__list {
@@ -217,7 +281,7 @@ div:last-child {
   animation: 10s cloud-move infinite linear;
 }
 
-/* css for the work.html file */
+/*css for the work.html file*/
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -256,7 +320,7 @@ div:last-child {
 }
 
 h1 {
-  font-size: var(--general-font-size);
+  font-size: 2rem;
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
