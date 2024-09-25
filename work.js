@@ -105,3 +105,9 @@ document.addEventListener("click", (event) => {
     pokemonModal.close();
   }
 });
+
+document.addEventListener("click", (event) => {
+  if (event.target == meetModal) {
+    meetModal.close();
+  }
+});
