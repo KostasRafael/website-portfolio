@@ -69,3 +69,39 @@ openAngularModal.addEventListener("click", () => {
 closeAngularModal.addEventListener("click", () => {
   angularModal.close();
 });
+
+document.addEventListener("click", (event) => {
+  if (event.target == angularModal) {
+    angularModal.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target == chatModal) {
+    chatModal.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target == apiModal) {
+    apiModal.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target == flixModal) {
+    flixModal.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target == chatModal) {
+    chatModal.close();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (event.target == pokemonModal) {
+    pokemonModal.close();
+  }
+});
