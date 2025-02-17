@@ -1,0 +1,326 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+#case-study-container {
+  border: 0.25rem solid white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#case-study {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+#case-study h1 {
+  font-size: 4rem;
+}
+
+#case-study .project-name {
+  color: red;
+  font-size: 8rem;
+}
+
+.images-border-container {
+  border: 0.5rem solid red;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.images-border-container img {
+  max-width: 100%; /* Ensures images do not exceed the container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures images fill the available space */
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For slogan div */
+/* For slogan div */
+/* For slogan div */
+/* For slogan div */
+
+#slogan {
+  position: relative;
+  height: 100vh;
+  border: 0.25rem solid white;
+}
+
+#slogan img {
+  display: block; /* Removes extra space below the image */
+  width: 100%; /* Make sure the image fills the container */
+  height: auto;
+}
+
+#slogan .slogan-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+#slogan .slogan-div h1 {
+  font-size: 2rem;
+}
+
+#slogan .slogan-div span {
+  color: red;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For project-overview div */
+/* For project-overview div */
+/* For project-overview div */
+/* For project-overview div */
+
+#project-overview {
+  min-height: 100vh; /* Ensures it’s at least full height but expands if needed */
+}
+
+#project-overview h1 {
+  margin-bottom: 2.4rem;
+}
+
+#project-overview .row {
+}
+
+#action-cards-container {
+}
+
+.action-card-col {
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 2px solid red;
+}
+
+/* The image must be restricted within this div */
+/* The image must be restricted within this div */
+.card-body {
+}
+
+/* styling for all the images */
+/* styling for all the images */
+.card-body img {
+  max-height: 250px;
+  max-width: 100%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For purpose-objective div */
+/* For purpose-objective div */
+/* For purpose-objective div */
+/* For purpose-objective div */
+
+#purpose-objective {
+  border: 0.5rem solid white;
+  min-height: 50vh;
+  display: flex;
+}
+
+#purpose-div {
+  border-right: 0.25rem solid white;
+}
+
+#objective-div {
+  border-left: 0.25rem solid white;
+}
+
+.career-foundry-img {
+  max-height: 10rem;
+  float: right;
+  margin-right: 1rem;
+}
+
+#purpose-div h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+#purpose-div p {
+  font-size: 2.5rem;
+}
+
+#objective-div h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: red;
+}
+
+#objective-div p {
+  font-size: 2.5rem;
+  padding-top: -px;
+}
+
+#objective-div img {
+  float: left;
+  margin-right: 2rem;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For server-side div */
+/* For server-side div */
+/* For server-side div */
+/* For server-side div */
+
+#server-side {
+  min-height: 100vh;
+  border: 0.25rem solid white;
+}
+
+#server-side h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: red;
+}
+
+#server-side .diagram {
+  max-height: 25rem;
+  max-width: 100%;
+}
+
+.paragraph-diagram {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.paragraph-diagram p {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.back-end-images-div {
+  display: flex;
+  border-top: 0.2rem dotted red;
+  padding: 1rem;
+  gap: 1rem; /* Adds spacing between images */
+  flex-wrap: wrap; /* Allows stacking on very small screens */
+}
+
+.back-end-images-div .code-image {
+  flex: 1;
+  object-fit: cover;
+  min-width: 50%; /* Prevents it from taking all space on small screens */
+}
+
+.right-images-div {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Takes up equal space on the right side */
+  gap: 10px;
+  min-width: 40%; /* Ensures it doesn't shrink too much */
+}
+
+.right-images-div img {
+  flex: 1; /* Makes both images take up equal height */
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .back-end-images-div {
+    flex-direction: column; /* Stack everything on small screens */
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For client-side div */
+/* For client-side div */
+/* For client-side-side div */
+/* For client-side-side div */
+
+#client-side {
+  min-height: 100vh;
+  border: 0.25rem solid white;
+}
+
+#client-side h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: red;
+}
+
+#client-side p {
+  font-size: 2.5rem;
+}
+
+.components-img {
+  height: 200px;
+}
+
+.components-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.images-lists {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.images-lists h4 {
+  color: red;
+}
+
+.lists-parent-div {
+  display: flex;
+  gap: 1rem;
+}
+
+.lists-parent-div ul {
+  margin-left: -14px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/* For final-thought div */
+/* For final-thought div */
+/* For final-thought-side div */
+/* For final-thought- div */
+
+#retrospective {
+  border: 0.25rem solid white;
+  min-height: 100vh;
+}
+
+#retrospective h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: red;
+  margin-bottom: 2.4rem;
+}
+
+.text-section span {
+  color: red;
+}

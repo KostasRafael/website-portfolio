@@ -1,0 +1,140 @@
+#main-body-container {
+  border: 0.5rem solid orangered;
+  min-height: 100vh;
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+
+/* Skills section */
+/* Skills section */
+/* Skills section */
+/* Skills section */
+
+#h1-skills-projects-div {
+  border: 0.2rem solid red;
+}
+
+#only-skills-projects-div {
+  border: 0.2rem solid green;
+  display: flex;
+}
+
+#skills-div {
+  border: 0.5rem solid black;
+  min-width: 40%; /* If the parent tries to make me smaller, it wont happen. I will always take 40% it's width */
+  max-width: 40%;
+}
+
+#html-css-div {
+  display: flex;
+}
+
+#left-side {
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+#right-side {
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+#javascript-react-div {
+  display: flex;
+  border: 5px solid blueviolet;
+}
+
+#javascript-react-div h4 {
+  margin-left: -2rem;
+}
+
+#left-ul {
+  border: 1px solid red;
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+#right-ul {
+  border: 1px solid green;
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+
+#node-mongo-div {
+  display: flex;
+  gap: 1rem;
+  border: 0.2rem solid red;
+}
+
+#left-list {
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+#right-list {
+  flex-basis: 50%;
+  font-size: 1rem;
+}
+
+#node-mongo-div h4 {
+  margin-left: -2rem;
+}
+
+#right-list h4 {
+  padding-left: 1rem;
+}
+
+/* On up to medium screens (max-width: 991px), disable flex */
+@media (max-width: 991px) {
+  /* for javascript-react div */
+  #javascript-react-div {
+    display: block; /* Stack elements vertically */
+  }
+
+  #left-ul,
+  #right-ul {
+    width: 100%; /* Ensure full width */
+  }
+
+  #skills-div {
+    max-width: 100%; /* Make it full width */
+    width: 100%; /* Ensure it takes up the full container */
+  }
+
+  /* for node-mongo div */
+  #node-mongo-div {
+    display: block; /* Stack elements vertically */
+  }
+
+  #left-list,
+  #right-list {
+    width: 100%; /* Ensure full width */
+  }
+
+  /* for html-css div */
+  #html-css-div {
+    display: block; /* Stack elements vertically */
+  }
+
+  #left-side,
+  #right-side {
+    width: 100%; /* Ensure full width */
+  }
+}
+
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+
+/* Projects section */
+/* Projects section */
+/* Projects section */
+/* Projects section */
+#projects-div {
+  border: 0.2rem solid orange;
+  max-width: 60%;
+  min-width: 60%;
+}
