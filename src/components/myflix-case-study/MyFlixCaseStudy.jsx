@@ -135,7 +135,7 @@ export default function CaseStudy() {
               deleteUser,
             ].map((imgSrc, index) => (
               <div key={index} className="col-6 col-md-4">
-                <div className="card h-100">
+                <div className="card-case-study h-100">
                   <div className="card-body">
                     <h4>
                       {

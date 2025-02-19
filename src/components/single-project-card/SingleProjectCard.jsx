@@ -58,7 +58,7 @@ export default function SingleProjectCard({ project }) {
       </Card.Body>
 
       {/* Circle Buttons for Switching Views */}
-      <div id="buttons-div" style={{ border: "0.2rem solid black" }}>
+      <div id="buttons-div">
         {[0, 1, 2].map((viewIndex) => (
           <Button
             id="card-buttons"

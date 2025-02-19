@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 
 export default function WebsitePortfolio() {
   return (
-    <Container fluid style={{ border: "0.2rem solid red" }}>
+    <Container fluid>
       <MainSection />
       <MainBody />
     </Container>

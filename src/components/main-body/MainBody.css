@@ -1,5 +1,4 @@
 #main-body-container {
-  border: 0.5rem solid orangered;
   min-height: 100vh;
 }
 
@@ -12,16 +11,13 @@
 /* Skills section */
 
 #h1-skills-projects-div {
-  border: 0.2rem solid red;
 }
 
 #only-skills-projects-div {
-  border: 0.2rem solid green;
   display: flex;
 }
 
 #skills-div {
-  border: 0.5rem solid black;
   min-width: 40%; /* If the parent tries to make me smaller, it wont happen. I will always take 40% it's width */
   max-width: 40%;
 }
@@ -42,7 +38,6 @@
 
 #javascript-react-div {
   display: flex;
-  border: 5px solid blueviolet;
 }
 
 #javascript-react-div h4 {
@@ -50,13 +45,11 @@
 }
 
 #left-ul {
-  border: 1px solid red;
   flex-basis: 50%;
   font-size: 1rem;
 }
 
 #right-ul {
-  border: 1px solid green;
   flex-basis: 50%;
   font-size: 1rem;
 }
@@ -67,7 +60,6 @@
 #node-mongo-div {
   display: flex;
   gap: 1rem;
-  border: 0.2rem solid red;
 }
 
 #left-list {
@@ -134,7 +126,6 @@
 /* Projects section */
 /* Projects section */
 #projects-div {
-  border: 0.2rem solid orange;
   max-width: 60%;
   min-width: 60%;
 }

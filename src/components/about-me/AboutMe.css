@@ -1,3 +1,17 @@
 #about-me-div {
   margin-top: 70px;
 }
+
+#about-me-div h1 {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  gap: 0.5rem;
+}
+.content img {
+  width: 10rem;
+  height: auto;
+  border-radius: 15%;
+}
