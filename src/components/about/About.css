@@ -10,8 +10,3 @@
   display: flex;
   gap: 0.5rem;
 }
-.content img {
-  width: 10rem;
-  height: auto;
-  border-radius: 15%;
-}

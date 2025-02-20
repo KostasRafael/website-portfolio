@@ -8,7 +8,11 @@ export default function AboutMe() {
     <section id="about" style={{ padding: "20px" }}>
       <h1 style={{ backgroundColor: "lightgray" }}>About Me</h1>
       <div class="content">
-        <img src={profileImage} alt="" />
+        <img
+          src={profileImage}
+          alt=""
+          style={{ width: "10rem", objectFit: "contain", borderRadius: "15%" }}
+        />
         <p>
           Since the very beginning of my adulthood, and up to this very present
           day, I have made sure to always express my curiosity and love of
@@ -52,7 +56,11 @@ export default function AboutMe() {
           individuals, ansd within an environment that encourages me to give it
           all I have.
         </p>
-        <img src={coldImage} alt="" />
+        <img
+          src={coldImage}
+          alt=""
+          style={{ width: "10rem", objectFit: "contain", borderRadius: "15%" }}
+        />
       </div>
       <a
         href="https://drive.google.com/uc?export=download&id=1ig3Qum1zKfXbFoLFHD3oWVXV8Iozpb2S"

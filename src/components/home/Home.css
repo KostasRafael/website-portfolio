@@ -9,4 +9,5 @@
 #home-container img {
   width: 10rem;
   height: auto;
+  border-radius: 15%;
 }
