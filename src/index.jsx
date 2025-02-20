@@ -1,20 +1,30 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import WebsitePortfolio from "./components/website-portfolio/WebsitePortfolio";
-import AboutMe from "./components/about-me/AboutMe";
 import NavigationBar from "./components/navigation-bar/NavigationBar";
 import MyFlixCaseStudy from "./components/myflix-case-study/MyFlixCaseStudy";
+import MeetApp from "./components/meet-app-case-study/MeetApp";
 import "./index.css";
+import Home from "./components/home/Home";
+import About from "./components/about/About";
+import Skills from "./components/skills/Skills";
+import Projects from "./components/projects/Projects";
+import Contact from "./components/contact/Contact";
 
 const MyPortfolio = () => {
   return (
     <Router>
       <NavigationBar />
-      <Routes>
-        <Route path="/" element={<WebsitePortfolio />} />
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/case-study" element={<MyFlixCaseStudy />} />
-      </Routes>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/case-study" element={<MyFlixCaseStudy />} />
+          <Route path="/case-studies/meet-app" element={<MeetApp />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

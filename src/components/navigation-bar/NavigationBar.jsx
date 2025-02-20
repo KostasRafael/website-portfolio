@@ -1,57 +1,132 @@
-import "./NavigationBar.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import linkedinImage from "../../../public/assets/images/linkedin.png";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
+import "./NavigationBar.css"; // Custom CSS
+import { Container } from "react-bootstrap";
 
 export default function NavigationBar() {
+  const location = useLocation();
+  const [active, setActive] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Track active section when scrolling
+    Events.scrollEvent.register("end", (to) => setActive(to));
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
   return (
-    <Navbar
-      fixed="top"
-      id="navbar"
-      style={{
-        backgroundColor: "darkblue",
-      }}
-    >
-      <Container fluid id="nav-nav-links-container">
-        <Nav className="me-auto">
-          <Nav.Link href="/" className="logo">
-            Rafael Techie Co.
-          </Nav.Link>
-        </Nav>
-        <div style={{ display: "flex" }}>
-          <div style={{ display: "flex" }}>
-            <div>
-              <h6>Crete Greece</h6>
-              <h6>rafael.techie@gmail.com</h6>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <a
-                style={{ color: "white" }}
-                href="https://drive.google.com/uc?export=download&id=1ig3Qum1zKfXbFoLFHD3oWVXV8Iozpb2S"
-                download
-              >
-                Download Resume
-              </a>
-              <a
-                href="https://www.linkedin.com/in/konstantinos-rafael-manousoudakis/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={linkedinImage}
-                  alt="linkedin image"
-                  style={{ width: "1.6rem", borderRadius: "15%" }}
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <Nav className="ms-auto">
-          <Nav.Link href="about" className="about">
-            About Me
-          </Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="logo" style={{ marginLeft: "1rem" }}>
+        <Link to="/">Rafael Techie Co.</Link>
+      </div>
+
+      {/* Hamburger Menu for Mobile */}
+      <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </div>
+
+      {/* Navigation Links */}
+      <ul
+        className={`nav-links ${menuOpen ? "open" : ""}`}
+        style={{ marginRight: "1rem" }}
+      >
+        <li>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="home"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className={active === "home" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </ScrollLink>
+          ) : (
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+          )}
+        </li>
+        <li>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="about"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className={active === "about" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </ScrollLink>
+          ) : (
+            <Link to="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          )}
+        </li>
+        <li>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="skills"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className={active === "skills" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Skills
+            </ScrollLink>
+          ) : (
+            <Link to="/skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </Link>
+          )}
+        </li>
+        <li>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className={active === "projects" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Projects
+            </ScrollLink>
+          ) : (
+            <Link to="/projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </Link>
+          )}
+        </li>
+        <li>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className={active === "contact" ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </ScrollLink>
+          ) : (
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
+          )}
+        </li>
+      </ul>
+    </nav>
   );
 }

@@ -1,0 +1,12 @@
+#home {
+}
+
+#home-container h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#home-container img {
+  width: 10rem;
+  height: auto;
+}
