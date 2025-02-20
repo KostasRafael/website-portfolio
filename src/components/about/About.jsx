@@ -59,7 +59,12 @@ export default function AboutMe() {
         <img
           src={coldImage}
           alt=""
-          style={{ width: "10rem", objectFit: "contain", borderRadius: "15%" }}
+          style={{
+            width: "10rem",
+            height: "20rem",
+            objectFit: "contain",
+            borderRadius: "15%",
+          }}
         />
       </div>
       <a
