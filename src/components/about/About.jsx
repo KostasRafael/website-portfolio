@@ -57,7 +57,7 @@ export default function AboutMe() {
         </p>
       </div>
       <a
-        href="https://drive.google.com/uc?export=download&id=1ig3Qum1zKfXbFoLFHD3oWVXV8Iozpb2S"
+        href="https://drive.google.com/uc?export=download&id=1Hu35Y3UaRKR1Bol7ELU9uR4dKMmo88Hqd40gzmWjKuY"
         download
         className="btn btn-primary btn-lg"
         style={{ textAlign: "center" }}
