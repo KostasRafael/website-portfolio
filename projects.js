@@ -54,7 +54,7 @@ export const meetApp = {
     "Meet App is a React-based event browsing app. Users can explore events by city, set event limits, and access details. It works offline with cached data, supports installation on local devices, and includes visual charts for event insights.",
   demo: "https://kostasrafael.github.io/meet/",
   github: "https://github.com/KostasRafael/meet.git",
-  casestudy: "https://rafaeltechie.netlify.app/case-study",
+  casestudy: "https://rafaeltechie.netlify.app/case-studies/meet-app",
   modaldescription:
     "This app displays data fetched from the Google calendar API. I built this app to learn and practice Progressive Web Applications (PWA), test-driven-development(TDD), serverless functions (FaaS), and OAuth.",
   modalfeatures: [

@@ -57,7 +57,7 @@ export default function AboutMe() {
           all I have.
         </p>
         <img
-          src={coldImage}
+          src="https://drive.google.com/uc?export=view&id=1cVZPQ1B96vUMMurDusLBI0o9jKdw_YiQ"
           alt=""
           style={{
             width: "10rem",
@@ -70,8 +70,6 @@ export default function AboutMe() {
       <a
         href="https://drive.google.com/uc?export=download&id=1ig3Qum1zKfXbFoLFHD3oWVXV8Iozpb2S"
         download
-        target="_blank"
-        rel="noopener noreferrer"
         className="btn btn-primary btn-lg"
         style={{ textAlign: "center" }}
       >

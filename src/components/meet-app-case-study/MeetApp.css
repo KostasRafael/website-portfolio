@@ -1,0 +1,10 @@
+.heading {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+  background-color: lightpink;
+}
+
+p {
+  font-size: 2rem;
+}
