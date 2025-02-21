@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./MyFlixCaseStudy.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 
 // Import images based on your Parcel folder structure
 import myflix1 from "../../../public/assets/images/myflix-1.png";
@@ -22,153 +23,293 @@ import updateUser from "../../../public/assets/images/update-user.png";
 import deleteUser from "../../../public/assets/images/delete-user.png";
 
 export default function CaseStudy() {
-  useEffect(() => {
-    const imagePaths = [myflix1, myflix2];
-
-    const containers = document.querySelectorAll(".images-border-container");
-    containers.forEach((container) => {
-      for (let i = 0; i < 7; i++) {
-        const img = document.createElement("img");
-        img.classList.add("border-images");
-        img.src = imagePaths[i % 2];
-        img.alt = `Image ${i + 1}`;
-        container.appendChild(img);
-      }
-    });
-  }, []);
-
   return (
-    <div>
+    <Container>
+      {/* Case Study Section */}
       <section id="case-study-container">
-        <div className="images-border-container"></div>
         <div id="case-study">
-          <h1>Case Study</h1>
+          <h1 style={{ backgroundColor: "lightcoral" }}>Case Study</h1>
           <h1>My full stack project</h1>
           <h1 className="project-name">myFlix</h1>
         </div>
         <div className="images-border-container"></div>
       </section>
 
-      <section id="slogan">
-        <img src={myflix1} alt="myFlix image" />
-        <div className="slogan-div">
-          <h1>
-            I <span>flix</span>
-          </h1>
-          <h1>
-            You <span>flix,</span>
-          </h1>
-          <h1>
-            We all <span>flix!</span>
-          </h1>
-          <h1>
-            Let's do so informatively using <span>myFlix</span>!!!
-          </h1>
+      {/* Overview Section */}
+      <section id="overview" style={{ marginTop: "4rem" }}>
+        <h1 style={{ backgroundColor: "lightcoral" }}>Overview</h1>
+        <div className="overview-content">
+          <p className="paragraph" style={{ marginTop: "2rem" }}>
+            This is a full-stack web application encompassing both the front-end
+            and back-end. The back-end is built using Node.js, leveraging an API
+            that interacts with a MongoDB database to handle data storage and
+            retrieval. The front-end is developed using React.js, enabling
+            dynamic and responsive user interfaces. The API serves as the
+            communication layer, facilitating seamless data exchange between the
+            database and the client applications through structured HTTP
+            requests.
+          </p>
+          <img src={frontBack} alt="" />
+        </div>
+        <img className="diagram" src={diagram} alt="" />
+      </section>
+
+      {/* Objective Section */}
+      <section id="objective" style={{ marginTop: "4rem" }}>
+        <h1 style={{ backgroundColor: "lightcoral" }}>The objective</h1>
+        <p className="paragraph" style={{ marginTop: "2rem" }}>
+          To have a fully functional user interface that displays a list of
+          movies. The user will be able to create an account, login, add movies
+          to their list of favourite movies, update their profile information,
+          and delete their account.
+        </p>
+      </section>
+
+      {/* Challenge Section */}
+      <section id="challenge" style={{ marginTop: "4rem" }}>
+        <h1 style={{ backgroundColor: "lightcoral" }}>The challenge</h1>
+        <p className="paragraph" style={{ marginTop: "2rem" }}>
+          To build all parts required for a fully functional application.
+          Namely, the back-end infrastructure that ensures data flow, and the
+          front-end infrastructure that ensures data consumption and usage
+          through a seamless user interface.
+        </p>
+      </section>
+
+      <section id="solution" style={{ marginTop: "4rem" }}>
+        <h1 style={{ backgroundColor: "lightcoral" }}>The Solution</h1>
+
+        {/* Server Side Section */}
+        <div id="server-side" style={{ marginTop: "4rem" }}>
+          <h1>Server Side</h1>
+
+          {/* Movie API Section */}
+          <div id="movie-api">
+            <p className="paragraph" style={{ marginTop: "2rem" }}>
+              The RESTful API was built with Node.js in combination with the
+              following technologies:
+            </p>
+            <div id="tech-images">
+              <ul>
+                <li>Express.js</li>
+                <li>Passport</li>
+                <li>JWT</li>
+                <li>OAuth2</li>
+                <li>CORS</li>
+                <li>Body-Parser</li>
+              </ul>
+              <img className="code-image" src={endpoints} alt="API Endpoints" />
+            </div>
+          </div>
+
+          {/* Database Section */}
+          <div id="database" style={{ marginTop: "4rem" }}>
+            <p className="paragraph">
+              The database was built with non-relational database techniques
+              using MongoDB and storing data in object-like structures. The data
+              stored in MongoDB includes movie data and user data.
+            </p>
+            <div className="database-images">
+              <img src={movieObject} alt="Movie Object" />
+              <img src={userObject} alt="User Object" />
+            </div>
+          </div>
+
+          {/* Client Side Section */}
+          <div id="client-side" style={{ marginTop: "4rem" }}>
+            <h1>Client Side</h1>
+            <p className="paragraph" style={{ marginTop: "2rem" }}>
+              The user interface was built using React alongside:
+            </p>
+            <div className="react-images">
+              <ul>
+                <li>React Redux</li>
+                <li>React-Bootstrap</li>
+                <li>Parcel</li>
+                <li>Browser-Router</li>
+              </ul>
+              <img
+                className="components-img"
+                src={componentsImg}
+                alt="React Components"
+              />
+            </div>
+            <p className="paragraph" style={{ marginTop: "2rem" }}>
+              Using these technologies, I created different React components and
+              then rendered those components via props. Additionally, I managed
+              the application's state with Redux in a central store.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div id="purpose-objective">
-        <div id="purpose-div">
-          <h1>Purpose</h1>
-          <img
-            className="career-foundry-img"
-            src={careerFoundry}
-            alt="Career Foundry logo"
-          />
-          <p>
-            I built this project as an exercise for my CareerFoundry course...
-          </p>
-        </div>
+      <div id="project-overview" className="container-fluid">
+        <h1 style={{ backgroundColor: "lightcoral" }}>Features:</h1>
 
-        <div id="objective-div">
-          <h1>Objective</h1>
-          <img src={frontBack} alt="Full-stack development" />
-          <p>To build an application completely from scratch...</p>
-        </div>
-      </div>
-
-      <div id="server-side">
-        <h1>Server side</h1>
-        <div className="paragraph-diagram">
-          <p>
-            The back-end consists of a RESTful API built with Node.js and
-            MongoDB...
-          </p>
-          <img className="diagram" src={diagram} alt="System Diagram" />
-        </div>
-        <div className="back-end-images-div">
-          <img className="code-image" src={endpoints} alt="API Endpoints" />
-          <div className="right-images-div">
-            <img src={movieObject} alt="Movie Object" />
-            <img src={userObject} alt="User Object" />
-          </div>
-        </div>
-      </div>
-
-      <div id="client-side">
-        <h1>Client-side</h1>
-        <p>The UI was built using React and Redux.</p>
-        <div className="images-lists">
-          <div className="component-integration">
-            <h4>Component Integration</h4>
-            <img
-              className="components-img"
-              src={componentsImg}
-              alt="Component Structure"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div id="project-overview">
-        <h1>Features of myFlix application:</h1>
-        <div className="container-fluid">
+        <div id="action-cards-container" className="container-fluid">
           <div className="row">
-            {[
-              signupImg,
-              loginImg,
-              listImg,
-              heartedMovie,
-              favoriteMovies,
-              removeFavorite,
-              updateUser,
-              deleteUser,
-            ].map((imgSrc, index) => (
-              <div key={index} className="col-6 col-md-4">
-                <div className="card-case-study h-100">
-                  <div className="card-body">
-                    <h4>
-                      {
-                        [
-                          "Sign up",
-                          "Log in",
-                          "Stream movies",
-                          "Add to favorites",
-                          "Browse favorites",
-                          "Delete favorites",
-                          "Update user info",
-                          "Delete user",
-                        ][index]
-                      }
-                    </h4>
-                    <img src={imgSrc} alt="" />
-                  </div>
+            {/* Sign up */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Sign up</h4>
+                  <p>User can create their personal account</p>
+                  <img
+                    src={signupImg}
+                    alt="Sign up"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Log in */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Log in</h4>
+                  <p>User can login to their personal account</p>
+                  <img
+                    src={loginImg}
+                    alt="Log in"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Stream movies */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Stream movies</h4>
+                  <p>User can see a list of movies.</p>
+                  <img
+                    src={listImg}
+                    alt="Stream movies"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Add to favorites */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Add to favorites</h4>
+                  <p>
+                    User can heart movies and add them to their list of
+                    favorites.
+                  </p>
+                  <img
+                    src={heartedMovie}
+                    alt="Add to favorites"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Browse favorites */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Browse favorites</h4>
+                  <p>User can see a list of their hearted movies</p>
+                  <img
+                    src={favoriteMovies}
+                    alt="Browse favorites"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Delete favorites */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Delete favorites</h4>
+                  <p>
+                    User can remove a movie from their list of favorites, i.e.,
+                    once they have watched it a few times.
+                  </p>
+                  <img
+                    src={removeFavorite}
+                    alt="Delete favorites"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Update user info */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Update user info</h4>
+                  <p>User can update their profile information.</p>
+                  <img
+                    src={updateUser}
+                    alt="Update user info"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Delete user */}
+            <div
+              className="action-card-col col-6 col-md-4"
+              style={{ marginBottom: "1rem" }}
+            >
+              <div className="card h-100">
+                <div className="card-body">
+                  <h4>Delete user</h4>
+                  <p>User can permanently delete their account.</p>
+                  <img
+                    src={deleteUser}
+                    alt="Delete user"
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div id="retrospective">
-        <h1>Retrospective</h1>
+        <h1 style={{ backgroundColor: "lightcoral" }}>Retrospective</h1>
 
         <div className="text-section">
           <h4>
             <span>I enjoyed</span> building everything from scratch—the
-            database, the RESTful API, and the user interface— and connecting
-            all these together. It was fascinating to see the basic components
-            of an application and how they interact.
+            database, the RESTful API, and the user interface—and connecting all
+            these together. It was fascinating to see the basic components of an
+            application and how they interact with each other.
           </h4>
         </div>
 
@@ -179,8 +320,8 @@ export default function CaseStudy() {
             displayed incorrect data, which could have stemmed from either the
             API response or how React handled it. I feared spending ages
             searching both. Fortunately, Postman helped by allowing me to send
-            HTTP requests and isolate the API for testing. This revealed the
-            issue was API-related, enabling me to fix it without unnecessary
+            HTTP requests and isolate the API for testing. This revealed that
+            the issue was API-related, enabling me to fix it without unnecessary
             front-end debugging.
           </h4>
         </div>
@@ -201,6 +342,6 @@ export default function CaseStudy() {
           </h4>
         </div>
       </div>
-    </div>
+    </Container>
   );
 }
