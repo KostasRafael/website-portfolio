@@ -20,7 +20,7 @@ export default function SingleProjectCard({ project }) {
           variant="top"
           src={project.image}
           alt={project.title}
-          style={{ width: "40rem" }}
+          style={{ maxWidth: "100%" }}
         />
 
         {/* Demo & GitHub Links */}

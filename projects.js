@@ -1,5 +1,5 @@
 import myFlixImage from "./public/assets/images/list.png";
-import movieApiImage from "./public/assets/images/movie-api.png";
+import movieApiImage from "./public/assets/images/endpoints.png";
 import meetAppImage from "./public/assets/images/meet.png";
 import myFlixAngularImage from "./public/assets/images/myflix-angular.png";
 

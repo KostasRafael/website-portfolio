@@ -11,7 +11,7 @@ function MyModal({ project }) {
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
-        Vie Details
+        View More
       </Button>
 
       <Modal show={show} onHide={handleClose} centered>
