@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import NavigationBar from "./components/navigation-bar/NavigationBar";
-import MyFlixCaseStudy from "./components/myflix-case-study/MyFlixCaseStudy";
 import MeetApp from "./components/meet-app-case-study/MeetApp";
 import "./index.css";
 import Home from "./components/home/Home";
