@@ -10,7 +10,7 @@ export const myFlix = {
     "myFlix-client is a React and Redux-based app where users can sign up, log in, and browse movies. They can add favorites and manage their profile, including updating their username, email, password, and favorite list.",
   demo: "https://myflixmoviescollection.netlify.app",
   github: "https://github.com/KostasRafael/myFlix-client.git",
-  casestudy: "https://rafaeltechie.netlify.app/case-study",
+  casestudy: "https://rafaeltechie.netlify.app/case-studies/myflix-app",
   modaltitle: "MyFlix React Client",
   modaldescription:
     "myFlix is a library of movies with information about movies. Users can view information such as description, genre and director. Additionally, users can create an account and ad movies to their list of favorite movies",
@@ -32,7 +32,7 @@ export const movieApi = {
     "movie_api is the backend of a movie web app, providing users with movie, director, and genre details. Users can sign up, update their info, and manage a list of favorite movies..",
   demo: "https://murmuring-ridge-94608-7a62e12e52db.herokuapp.com",
   github: "https://github.com/KostasRafael/movie_api.git",
-  casestudy: "https://rafaeltechie.netlify.app/case-study",
+  casestudy: "https://rafaeltechie.netlify.app/case-studies/movie-api",
   modaltittle: "MyFlix RESTful API",
   modaldescription:
     "movie_api is the API that I created to pass data to both UIs, the myFlix Ract client and the myFlix Angular client. The goal of this project was to learn and practice working with Node.js, as well is to have an API that will be integrated with a MongoDB database, and will feed data the 2 UIs.",

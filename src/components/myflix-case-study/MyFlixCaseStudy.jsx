@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
-import "./MyFlixCaseStudy.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
-
-// Import images based on your Parcel folder structure
-import myflix1 from "../../../public/assets/images/myflix-1.png";
-import myflix2 from "../../../public/assets/images/myflix-2.png";
-import careerFoundry from "../../../public/assets/images/career-foundry.png";
-import frontBack from "../../../public/assets/images/front-back.png";
-import diagram from "../../../public/assets/images/diagram.png";
-import endpoints from "../../../public/assets/images/endpoints.png";
-import movieObject from "../../../public/assets/images/movie-object.png";
-import userObject from "../../../public/assets/images/user-object.png";
-import componentsImg from "../../../public/assets/images/components.jpg";
+import { Container, Card } from "react-bootstrap";
+import fetchMoviesImage from "../../../public/assets/images/fetch-movies-endpoint.png";
+import reduxStoreImage from "../../../public/assets/images/redux-store.png";
+import loginEndpoint from "../../../public/assets/images/login-endpoint.png";
+import signupEndpoint from "../../../public/assets/images/signup-endpoint.png";
+import deleteMovieEndpoint from "../../../public/assets/images/delete-movie-endpoint.png";
+import deleteUsereEndpoint from "../../../public/assets/images/delete-user-endpoint.png";
+import updateUserEndpoint from "../../../public/assets/images/update-user-endpoint.png";
+import favoriteMoviesEndpoint from "../../../public/assets/images/favorite-movies-endpoint.png";
+import connectionDiagram from "../../../public/assets/images/connection-diagram.png";
 import signupImg from "../../../public/assets/images/signup.png";
 import loginImg from "../../../public/assets/images/login.png";
 import listImg from "../../../public/assets/images/list.png";
@@ -22,130 +18,145 @@ import removeFavorite from "../../../public/assets/images/remove-favorite.png";
 import updateUser from "../../../public/assets/images/update-user.png";
 import deleteUser from "../../../public/assets/images/delete-user.png";
 
-export default function CaseStudy() {
+export default function MyflixCaseStudy() {
   return (
     <Container>
-      {/* Case Study Section */}
-      <section id="case-study-container">
-        <div id="case-study">
-          <h1 style={{ backgroundColor: "lightcoral" }}>Case Study</h1>
-          <h1>My full stack project</h1>
-          <h1 className="project-name">myFlix</h1>
-        </div>
-        <div className="images-border-container"></div>
-      </section>
-
-      {/* Overview Section */}
-      <section id="overview" style={{ marginTop: "4rem" }}>
-        <h1 style={{ backgroundColor: "lightcoral" }}>Overview</h1>
-        <div className="overview-content">
-          <p className="paragraph" style={{ marginTop: "2rem" }}>
-            This is a full-stack web application encompassing both the front-end
-            and back-end. The back-end is built using Node.js, leveraging an API
-            that interacts with a MongoDB database to handle data storage and
-            retrieval. The front-end is developed using React.js, enabling
-            dynamic and responsive user interfaces. The API serves as the
-            communication layer, facilitating seamless data exchange between the
-            database and the client applications through structured HTTP
-            requests.
-          </p>
-          <img src={frontBack} alt="" />
-        </div>
-        <img className="diagram" src={diagram} alt="" />
-      </section>
-
-      {/* Objective Section */}
-      <section id="objective" style={{ marginTop: "4rem" }}>
-        <h1 style={{ backgroundColor: "lightcoral" }}>The objective</h1>
-        <p className="paragraph" style={{ marginTop: "2rem" }}>
-          To have a fully functional user interface that displays a list of
-          movies. The user will be able to create an account, login, add movies
-          to their list of favourite movies, update their profile information,
-          and delete their account.
+      <div style={{ marginTop: "2rem" }}>
+        <h1 style={{ fontSize: "8rem", textAlign: "center" }}>Case Study</h1>
+        <h1 style={{ fontSize: "8rem", textAlign: "center" }}>myFlix </h1>
+      </div>
+      <section style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Overview
+        </h1>
+        <p>
+          The user interface of a movies app that users can use to browse a list
+          of movies, and details of these movies, such as title, genre, director
+          and image. The UI must be build with React.js alongside Redux.
         </p>
       </section>
-
-      {/* Challenge Section */}
-      <section id="challenge" style={{ marginTop: "4rem" }}>
-        <h1 style={{ backgroundColor: "lightcoral" }}>The challenge</h1>
-        <p className="paragraph" style={{ marginTop: "2rem" }}>
-          To build all parts required for a fully functional application.
-          Namely, the back-end infrastructure that ensures data flow, and the
-          front-end infrastructure that ensures data consumption and usage
-          through a seamless user interface.
+      <section style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Objective
+        </h1>
+        <p>
+          Develop and deploy a React.js based user interface that integrates
+          with the movies_api, enabling retrieval of movie and user details and
+          supporting basic CRUD operations on these resources on a database.
         </p>
       </section>
-
-      <section id="solution" style={{ marginTop: "4rem" }}>
-        <h1 style={{ backgroundColor: "lightcoral" }}>The Solution</h1>
-
-        {/* Server Side Section */}
-        <div id="server-side" style={{ marginTop: "4rem" }}>
-          <h1>Server Side</h1>
-
-          {/* Movie API Section */}
-          <div id="movie-api">
-            <p className="paragraph" style={{ marginTop: "2rem" }}>
-              The RESTful API was built with Node.js in combination with the
-              following technologies:
-            </p>
-            <div id="tech-images">
-              <ul>
-                <li>Express.js</li>
-                <li>Passport</li>
-                <li>JWT</li>
-                <li>OAuth2</li>
-                <li>CORS</li>
-                <li>Body-Parser</li>
-              </ul>
-              <img className="code-image" src={endpoints} alt="API Endpoints" />
-            </div>
-          </div>
-
-          {/* Database Section */}
-          <div id="database" style={{ marginTop: "4rem" }}>
-            <p className="paragraph">
-              The database was built with non-relational database techniques
-              using MongoDB and storing data in object-like structures. The data
-              stored in MongoDB includes movie data and user data.
-            </p>
-            <div className="database-images">
-              <img src={movieObject} alt="Movie Object" />
-              <img src={userObject} alt="User Object" />
-            </div>
-          </div>
-
-          {/* Client Side Section */}
-          <div id="client-side" style={{ marginTop: "4rem" }}>
-            <h1>Client Side</h1>
-            <p className="paragraph" style={{ marginTop: "2rem" }}>
-              The user interface was built using React alongside:
-            </p>
-            <div className="react-images">
-              <ul>
-                <li>React Redux</li>
-                <li>React-Bootstrap</li>
-                <li>Parcel</li>
-                <li>Browser-Router</li>
-              </ul>
-              <img
-                className="components-img"
-                src={componentsImg}
-                alt="React Components"
-              />
-            </div>
-            <p className="paragraph" style={{ marginTop: "2rem" }}>
-              Using these technologies, I created different React components and
-              then rendered those components via props. Additionally, I managed
-              the application's state with Redux in a central store.
-            </p>
-          </div>
-        </div>
+      <section style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Challenge
+        </h1>
+        <p>
+          I needed to figure out how to integrate the React UI with the
+          movies_api, in order to ultimately perform CRUD operations on the
+          resources on MongoDB. Additionally, I had to ensure that the UI
+          displays any data fetched in an intuitive way, such that users can
+          easily interact with them.
+        </p>
+        <img src={connectionDiagram} alt="" />
       </section>
+      <section style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Solution
+        </h1>
+        <p>
+          The user interface will be rendered dynamically, based on the state of
+          movies and the user logged in.
+        </p>
+        <p>
+          Information about the state of movies and the user is stored in a
+          MongoDB database, and CRUD operations can be performed to it through
+          the endpoints exposed by the movie_api
+        </p>
+        <p>
+          This means that my application will need to send http requests to the
+          movie_api in order to retrieve these data and perform other http
+          actions on them.
+        </p>
+        <p>
+          This is achieved by looking into the movie_api documentation and
+          identifying the url endpoints that will perform each action.
+        </p>
+        <p>
+          Bellow, there are cards presenting the endpoints and the action they
+          perform. The javascript fetch() method is used to send the request to
+          each endpoint.
+        </p>
+      </section>
+      <div
+        className="endpoints"
+        style={{
+          display: "flex",
+          gap: "1rem",
+          flexWrap: "wrap",
+          marginTop: "4rem",
+        }}
+      >
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>User signup</h6>
+            <img src={signupEndpoint} alt="" style={{ maxWidth: "100%" }} />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>User login</h6>
+            <img src={loginEndpoint} alt="" style={{ maxWidth: "100%" }} />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>Fetch all the movies</h6>
+            <img src={fetchMoviesImage} alt="" style={{ maxWidth: "100%" }} />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>Add movie to the user's list of favorite movies</h6>
+            <img
+              src={favoriteMoviesEndpoint}
+              alt=""
+              style={{ maxWidth: "100%" }}
+            />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>Remove movie from the user's list of favorite movies</h6>
+            <img
+              src={deleteMovieEndpoint}
+              alt=""
+              style={{ maxWidth: "100%" }}
+            />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>Update the user's information</h6>
+            <img src={updateUserEndpoint} alt="" style={{ maxWidth: "100%" }} />
+          </Card.Body>
+        </Card>
+        <Card style={{ flexBasis: "25rem" }}>
+          <Card.Body>
+            <h6>Delete user account</h6>
+            <img
+              src={deleteUsereEndpoint}
+              alt=""
+              style={{ maxWidth: "100%" }}
+            />
+          </Card.Body>
+        </Card>
+      </div>
 
-      <div id="project-overview" className="container-fluid">
-        <h1 style={{ backgroundColor: "lightcoral" }}>Features:</h1>
-
+      <div class="features" style={{ marginTop: "4rem" }}>
+        <h1>Features</h1>
+        <p>
+          Using the endpoints shown above, the application has the following
+          features:
+        </p>
         <div id="action-cards-container" className="container-fluid">
           <div className="row">
             {/* Sign up */}
@@ -154,9 +165,12 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Sign up</h4>
-                  <p>User can create their personal account</p>
+                  <p>User can create an account</p>
                   <img
                     src={signupImg}
                     alt="Sign up"
@@ -172,13 +186,16 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Log in</h4>
-                  <p>User can login to their personal account</p>
+                  <p>User can login to their account</p>
                   <img
                     src={loginImg}
                     alt="Log in"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -190,13 +207,16 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Stream movies</h4>
                   <p>User can see a list of movies.</p>
                   <img
                     src={listImg}
                     alt="Stream movies"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -208,7 +228,10 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Add to favorites</h4>
                   <p>
                     User can heart movies and add them to their list of
@@ -217,7 +240,7 @@ export default function CaseStudy() {
                   <img
                     src={heartedMovie}
                     alt="Add to favorites"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -229,13 +252,16 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Browse favorites</h4>
                   <p>User can see a list of their hearted movies</p>
                   <img
                     src={favoriteMovies}
                     alt="Browse favorites"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -247,7 +273,10 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Delete favorites</h4>
                   <p>
                     User can remove a movie from their list of favorites, i.e.,
@@ -256,7 +285,7 @@ export default function CaseStudy() {
                   <img
                     src={removeFavorite}
                     alt="Delete favorites"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -268,13 +297,16 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Update user info</h4>
                   <p>User can update their profile information.</p>
                   <img
                     src={updateUser}
                     alt="Update user info"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -286,13 +318,16 @@ export default function CaseStudy() {
               style={{ marginBottom: "1rem" }}
             >
               <div className="card h-100">
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ backgroundColor: "lightslategray" }}
+                >
                   <h4>Delete user</h4>
-                  <p>User can permanently delete their account.</p>
+                  <p>User can delete their account.</p>
                   <img
                     src={deleteUser}
                     alt="Delete user"
-                    style={{ maxWidth: "100%", maxHeight: "100%" }}
+                    style={{ maxWidth: "100%" }}
                   />
                 </div>
               </div>
@@ -301,46 +336,49 @@ export default function CaseStudy() {
         </div>
       </div>
 
-      <div id="retrospective">
-        <h1 style={{ backgroundColor: "lightcoral" }}>Retrospective</h1>
+      <div className="deployment" style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Deployment
+        </h1>
+        <p>
+          myFlix app was deplyed on Netlify. I connected Netlify to the
+          project's repository on Github, and configured it so that when any
+          change is detected in the repo, Netlify redeploys the app in accord
+          with the latest state of the repository.
+        </p>
+      </div>
 
-        <div className="text-section">
-          <h4>
-            <span>I enjoyed</span> building everything from scratch—the
-            database, the RESTful API, and the user interface—and connecting all
-            these together. It was fascinating to see the basic components of an
-            application and how they interact with each other.
-          </h4>
-        </div>
-
-        <div className="text-section">
-          <h4>
-            <span>I struggled</span> with debugging because I had to deal with
-            both the RESTful API and the user interface. At one point, the UI
-            displayed incorrect data, which could have stemmed from either the
-            API response or how React handled it. I feared spending ages
-            searching both. Fortunately, Postman helped by allowing me to send
-            HTTP requests and isolate the API for testing. This revealed that
-            the issue was API-related, enabling me to fix it without unnecessary
-            front-end debugging.
-          </h4>
-        </div>
-
-        <div className="text-section">
-          <h4>
-            <span>My future plan</span> is to connect my application to the IMDB
-            API and pull movies from it, allowing my application to access a
-            larger selection of movies.
-          </h4>
-        </div>
-
-        <div className="text-section">
-          <h4>
-            <span>Overall,</span> I really enjoyed building this application.
-            I’m super happy and proud to have created my own application
-            entirely from scratch!
-          </h4>
-        </div>
+      <div className="retrospect" style={{ marginTop: "4rem" }}>
+        <h1 style={{ textAlign: "center", backgroundColor: "lightyellow" }}>
+          Retrospective
+        </h1>
+        <h4>
+          <span style={{ color: "red" }}>I enjoyed</span> figuring out how to
+          connect the myFlix UI with the movie_api. I was fascinated to see how
+          how http requests are send to an api, and in turn, how the api reacts
+          in response to those requests.
+        </h4>
+        <h4>
+          <span style={{ color: "red" }}>I struggled</span> with debugging
+          because I had to deal with both the RESTful API and the user
+          interface. At one point, the UI displayed incorrect data, which could
+          have stemmed from either the API response or how React handled it. I
+          feared spending ages searching both. Fortunately, Postman helped by
+          allowing me to send HTTP requests and isolate the API for testing.
+          This revealed that the issue was API-related, enabling me to fix it
+          without unnecessary front-end debugging.
+        </h4>
+        <h4>
+          <span style={{ color: "red" }}>My future plan</span> is to connect my
+          application to the IMDB API and pull movies from it, allowing my
+          application to access a larger selection of movies.
+        </h4>
+        <h4>
+          <span style={{ color: "red" }}>Overall,</span> I really enjoyed
+          building this user interface with react. I’m super happy and proud to
+          have created managed to create an app that renders dynamically,
+          depending on the state of some data in a database!
+        </h4>
       </div>
     </Container>
   );
