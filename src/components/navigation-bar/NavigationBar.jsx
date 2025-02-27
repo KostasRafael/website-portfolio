@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
 import "./NavigationBar.css"; // Custom CSS
-import { Container } from "react-bootstrap";
 
 export default function NavigationBar() {
   const location = useLocation();
